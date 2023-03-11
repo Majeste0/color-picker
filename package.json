@@ -1,0 +1,19 @@
+{
+  "name": "color-picker",
+  "version": "1.0.0",
+  "description": "Palette color picker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Majeste0/color-picker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Majeste0/color-picker/issues"
+  },
+  "homepage": "https://github.com/Majeste0/color-picker#readme"
+}
