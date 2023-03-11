@@ -4,7 +4,8 @@
   "description": "Palette color picker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass src/styles/style.scss dist/styles/custom.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/Majeste0/color-picker/issues"
   },
-  "homepage": "https://github.com/Majeste0/color-picker#readme"
+  "homepage": "https://github.com/Majeste0/color-picker#readme",
+  "dependencies": {
+    "sass": "^1.59.2",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
+  },
+  "devDependencies": {
+    "style-loader": "^3.3.1"
+  }
 }

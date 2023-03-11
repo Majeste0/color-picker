@@ -1,0 +1,69 @@
+body {
+  font-family: "Tilt Warp", cursive;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: aquamarine;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 75%;
+  padding: 0;
+  margin: 0 20px 20px 20px;
+}
+
+.color-picker {
+  height: 39%;
+  width: 14%;
+  margin: 3%;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 2%;
+}
+
+.color {
+  height: 80%;
+  background-color: rgb(196, 51, 51);
+  margin: 3% 3% 0 3%;
+  border-radius: 2%;
+}
+
+.color_code {
+  height: 20%;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  /* margin: 0 auto; */
+  display: flex;
+  /* display: block; */
+  align-items: center;
+  justify-content: center;
+}
+
+.refresh {
+  display: block;
+  margin: 2% auto 0 auto;
+  padding: 1%;
+  background-color: rgb(196, 51, 51);
+  color: white;
+  border: none;
+  border-radius: 2%;
+}
+
+/*# sourceMappingURL=custom.css.map */
