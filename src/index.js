@@ -1,13 +1,45 @@
 const randomHexa = () => {
   let n = (Math.random() * 0xfffff * 1000000).toString(16);
-  console.log("#" + n.slice(0, 6));
   return "#" + n.slice(0, 6);
 };
 window.randomizeColorCodes = () => {
-  const colorCodes = document.querySelectorAll(".color_code");
-  colorCodes.forEach((code) => {
-    code.textContent = randomHexa();
+  const colorPickers = document.querySelectorAll(".color-picker");
+  const colorBackground = document.querySelectorAll(".color");
+
+  colorPickers.forEach((colorPicker, index) => {
+    const colorCode = colorPicker.querySelector(".color_code");
+    const newHexa = randomHexa();
+    colorCode.textContent = newHexa;
+    colorBackground[index].style.backgroundColor = newHexa;
+
+    // Add click event listener to each color picker element
+    colorPicker.addEventListener("click", () => {
+      const range = document.createRange();
+      range.selectNodeContents(colorCode);
+
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+
+      document.execCommand("copy");
+
+      selection.removeAllRanges();
+
+      colorCode.textContent = "COPIÉ !";
+
+      setTimeout(() => {
+        colorCode.textContent = newHexa;
+      }, 500);
+    });
   });
 };
 
-window.addEventListener("load", updateColorCodes);
+let isLoaded = false;
+const randomizeColorCodesOnce = () => {
+  if (!isLoaded) {
+    randomizeColorCodes();
+    isLoaded = true;
+  }
+};
+
+window.addEventListener("load", randomizeColorCodesOnce);
